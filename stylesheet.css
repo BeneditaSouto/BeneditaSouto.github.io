@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box
+}
+html {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 200;
+    width: 100%;
+    font-size: 20px;
+}
+
+#main_nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #999999;
+    width: 25%;
+    height:100%;
+    color: #E6E6E6;
+    font-size: 1rem;
+    text-align: left;
+		}
+    #main_nav:target {
+			display: block;
+		}
+img#nav_close_img{
+    max-width: 20%;
+    height: auto;
+    object-fit: contain;
+    padding: 2vw 0vw;
+    margin-left: 0vw;
+}
+div#closed_nav{
+    width: 25%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+}
+img#nav_open_img{
+    max-width: 17%;
+    height: auto;
+    object-fit: contain;
+    padding: 1.5vw 0vw;
+    margin: 2vw 3vw;
+    float: right;
+}
+#main_nav ul {
+    list-style-type: none;
+}
+#main_nav li {
+    padding: 1.5vw 0vw;
+}
+a.nav_link{
+    color: #E6E6E6;
+    text-decoration: none
+}
+a:hover.nav_link{
+    background-color: rgb(230, 230, 230, 0.5);
+    margin: 0;
+}
+a.active{
+    color: #E6E6E6;
+    text-decoration: none;
+    font-weight:500;
+}
+
+img#Home_img {
+    margin: 0 auto;
+    margin-bottom: 4vw;
+    max-width: 30%;
+    height: auto;
+    object-fit: contain;
+}
+
+#home_align{
+    margin: 10% auto;
+    width: 100%;
+    max-height: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 130%;
+}
+
+#getStarted{
+    width: 10%;
+    text-align: center;
+    margin: auto;
+    outline: none;
+}
+
+img#Title_img {
+    margin: 2vw auto;
+    max-width: 15%;
+    height: auto;
+    object-fit: contain;
+}
+
+/*header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    object-fit: contain;
+}*/
+
+body {
+    color: #999999;
+    text-align: center;
+    background-image: url(images/BG.png);
+    background-size: cover;
+    background-position: top center;
+}
+
+.highlight{
+    font-size: 1.2rem;
+    margin: 1%;
+}
+
+button { /*ALL Buttons*/
+    font-family: 'Dosis', sans-serif;
+    color: #999999;
+    font-size: 0.75rem;
+    width: 10%;
+    max-width: 10%;
+    height: auto;
+    object-fit: contain;
+    border-style: none;
+    background-color: transparent;
+    outline: none;
+}
+
+/* Code for How it Works Page*/
+.top_text{
+    text-align: center;
+    font-size: 150%;
+    margin: 0 12vw;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat (3, 1fr);
+    grid-gap: 3%;
+    /*align-items: start;*/
+    justify-content: center;
+}
+
+.steps{
+    font-family: 'Dosis', sans-serif;
+    font-weight:200;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+#step01, #step03, #step05{
+    text-align: right;
+}
+
+#step02, #step04, #step06{
+    text-align: left;
+}
+
+.steps h4{
+    margin: 0;
+    padding: 5%;
+}
+
+#instruction05{
+    margin: 0 auto;
+    width: 30%;
+    height: auto;
+    float: ;
+}
+
+.instructions{
+    text-align: left;
+    margin: 0;
+}
+
+/* Code for Start Token Page*/
+
+#NoOfCandles, #Age, #WishInput {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    padding: 4%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+input{
+    width: 10%;
+    margin: 1% auto;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    height: 80%;
+    padding: 0.5vw;
+    text-align: center;
+    font-family:'Dosis', sans-serif;
+    color: rgb(153, 153, 153);
+    font-size: 1rem;
+}
+
+/*hide number arrows inside the box*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+textarea{
+    margin: 1% auto;
+    margin-bottom: 5%;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid rgb(153, 153, 153);
+    border-radius: 2px;
+    padding: 0.7vw;
+    width: 30%;
+    height: 40%;
+    min-height: 40%;
+    max-width: 40%;
+    min-width: 10%;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    color: rgb(153, 153, 153);
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+.captions{
+    font-size: 1.2rem;
+    margin: 0%;
+    margin-bottom: 5%;
+}
+
+.add1, .minus1 {
+    font-size: 1.7rem;
+    font-weight: 200;
+}
+
+/*Code for Final Token Page*/
+#Token{
+    text-align: center
+    margin: 2% auto;
+    width: 80%;
+    object-fit: contain;
+}
+
+/*#Token canvas {
+    display: block;
+    height: 400px;
+}*/
+
+/*Code for Buy Page*/
+#Necklace, #Keychain{
+    grid-column-start: 2;
+}
+
+.option {
+    outline: solid;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500" rel="stylesheet">
+    <link href="stylesheet.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+
+    <meta charset="utf-8">
+    </head>
+    
+    <body>
+      <div id="closed_nav">
+      <a href="#main_nav" id="show_nav"><img id="nav_open_img" src="images/Menu.png" alt="Menu"></a>
+    </div>
+      
+      <nav id="main_nav">
+        <ul>
+            <a href="#body" id="hide_nav"><img id="nav_close_img" src="images/Menu.png" alt="Menu"></a>
+            <li><a class="nav_link" href="index.html">Home</a></li>
+            <li><a class="nav_link" href="start_token.html">Make a token</a></li>
+            <li><a class="active" href="how_works.html">How does it work?</a> </li>
+        </ul>  
+      </nav>
+        
+        <header>
+            <a href= "index.html">
+            <img id="Title_img" src="images/Title.png" alt="I wish...">
+             </a>
+        </header>
+        
+        <p class="top_text">I Wish uses different information you give us from <br> your birthday experience to create your own unique token.</p>
+        
+        <div class="grid">
+            <div id="step01" class="steps">
+                <h4>01</h4>
+            </div>
+
+            <div class="instructions">
+                <p>The amount of candles you blew out defines the number of ‘sections’
+    inside each segment</p>
+                <img src=images/How_Works_01.png alt="Grid division example" width="321" height="128">
+            </div>
+
+            <div class="instructions">
+                <p>The age you turned defines the amout of circle segments </p>
+                <img src=images/How_Works_02.png alt="Circle Segments example" width="321" height="128">
+            </div>
+            
+            <div id="step02" class="steps">
+                <h4>02</h4>
+            </div>
+
+            <div id="step03" class="steps">
+                <h4>03</h4>
+            </div>
+
+            <div class="instructions">
+                <p>The time it takes to ‘make your wish’ (since you click start until you finish) defines the number of concentric circles</p>
+                <img src=images/How_Works_03.png alt="Circle Segments example" width="321" height="128">
+            </div>
+
+            <div class="instructions">
+                <p>The characters in your wish define the number of intersection points used to generate your token</p>
+                <img src=images/How_Works_04.png alt="Circle Segments example" width="321" height="128">
+            </div>
+            
+            <div id="step04" class="steps">
+                <h4>04</h4>
+            </div>
+
+            <div id="step05" class="steps">
+                <h4>05</h4>
+            </div>
+
+            <div class="instructions">
+                <p>The design in each segment is identical so that you end up with a concentric, simmetrical token</p>
+                <img id="instruction05" src=images/How_Works_05.png alt="Circle Segments example">
+            </div>
+
+            <div class="instructions">
+                <p>Use your token to remind yourself what you wished for throughout the year</p>
+            </div>
+            
+            <div id="step06" class="steps">
+                <h4>06</h4>
+            </div>
+        </div>
+        
+        <a href="start_token.html">
+        <button type="button" id='getStarted' href="start_token.html">Get Started <br> <br>
+          <img src=images/arrow_right.png alt="Right Arrow" height="73" width="44">
+        </button>  
+        </a>
+         
+    </body>
+    
+</html>

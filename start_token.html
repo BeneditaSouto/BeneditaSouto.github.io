@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500" rel="stylesheet">
+        <link href="stylesheet.css" type="text/css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+         <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+
+    <meta charset="utf-8">
+    </head>
+    
+    <body>
+      <div id="closed_nav">
+      <a href="#main_nav" id="show_nav"><img id="nav_open_img" src="images/Menu.png" alt="Menu"></a>
+    </div>
+      
+      <nav id="main_nav">
+        <ul>
+            <a href="#body" id="hide_nav"><img id="nav_close_img" src="images/Menu.png" alt="Menu"></a>
+            <li><a class="nav_link" href="index.html">Home</a></li>
+            <li><a class="active" href="start_token.html">Make a token</a></li>
+            <li><a class="nav_link" href="how_works.html">How does it work?</a> </li>
+        </ul>  
+      </nav>
+        
+        <header>
+              <a href= "index.html">
+        <img id="Title_img" src="images/Title.png" alt="I wish...">
+            </a>
+        </header>
+        
+        <form action="/final-token.html" method="GET">
+                   
+            <div class="section" id="NoOfCandles">
+                <p class="captions">I blew out...</p>
+                
+                <button type="button" class="minus1" onclick="subtractNumber();">-</button>
+                    <input id="candles" name="candles" type="number" value= "1" min="1" required
+                           onkeydown="javascript: return event.keyCode === 8 || event.keyCode === 46 ? true : !isNaN(Number(event.key))">
+                <button type="button" class="add1" onclick="addNumber();">+</button>
+                
+                <p class="captions">candles</p>
+                
+                <script>
+                    var i = 1;
+                    function addNumber() {
+                       i++;
+                    document.getElementById('candles').value = i;
+                        }
+                    function subtractNumber() {
+                        if (document.getElementById('candles').value > 1){
+                        i--;
+                        document.getElementById('candles').value = i;
+                        }
+                        else{
+                          document.getElementById('candles').value = 1;
+                        }
+                    }
+                </script>
+
+                <a href="#Age"><button type="button" class='Next'>Next <br> <br>
+                    <img src=images/arrow_down.png alt="Down Arrow" height="44" width="73">
+                </button></a>
+             </div>
+
+            <div class="section" id="Age">
+                <p class="captions">I turned...</p>
+                
+                    <button type="button" class="minus1" onclick="subtractYear();">-</button>
+                        <input id="years" name="years" type="number" value="1" min="1" required onkeydown="javascript: return event.keyCode === 8 || event.keyCode === 46 ? true : !isNaN(Number(event.key))">
+                    <button type="button" class="add1" onclick="addYear();">+</button>
+                
+                <p class="captions">years old</p>
+                
+                <script>
+                    var j = 1;
+                    function addYear() {
+                       j++;
+                    document.getElementById('years').value = j;
+                        }
+                    function subtractYear() {
+                        if (document.getElementById('years').value > 1){
+                        i--;
+                        document.getElementById('years').value = j;
+                        }
+                        else{
+                          document.getElementById('years').value = 1;
+                        }
+                    }
+                </script>
+
+                <a href="#WishInput">
+                <button type="button" class='Next'>Next<br> <br>
+                    <img src=images/arrow_down.png alt="Down Arrow" height="44" width="73">
+                </button>
+                </a>
+            </div>
+
+            <div class="section" id="WishInput">   
+                <p class="captions">I wished for...</p>
+                <textarea name="wish_made" required></textarea>
+                <br>
+                
+                <input type="hidden" name="time" value="0"/>
+                
+                <button type="submit">Create Token <br> <br>
+                <img src=images/token.png alt="Token" height="100" width="100">
+                </button>
+            </div>     
+            
+        </form>
+        
+        <script>
+        function updateTime() {
+            var el = document.querySelector('input[name=time]');
+            el.value = parseInt(el.value) + 1;
+        }
+        setInterval(function() {
+            updateTime()
+        }, 1000);
+        </script>
+        
+    </body>
+    
+</html>
