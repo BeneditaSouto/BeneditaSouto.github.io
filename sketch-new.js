@@ -114,7 +114,7 @@ function generatePoints() {
   
 	// Work out the number of circles
     for (var ii = 0; ii <= numOfCircles; ii++) {
-        var d = diameter * ii;
+        var d = constrain (diameter * ii, diameter * ii, width - diameter);
         
         circles[ii] = new Circle(0, 0, d);
         circles[ii].show();

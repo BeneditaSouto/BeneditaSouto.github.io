@@ -35,6 +35,7 @@
         <form action="/final-token.html" method="GET">
                    
             <div class="section" id="NoOfCandles">
+                <div class="content">
                 <p class="captions">I blew out...</p>
                 
                 <button type="button" class="minus1" onclick="subtractNumber();">-</button>
@@ -62,11 +63,13 @@
                 </script>
 
                 <a href="#Age"><button type="button" class='Next'>Next <br> <br>
-                    <img src=images/arrow_down.png alt="Down Arrow" height="44" width="73">
+                    <img src=images/arrow_down.png alt="Down Arrow">
                 </button></a>
+                </div>
              </div>
 
             <div class="section" id="Age">
+                <div class="content">
                 <p class="captions">I turned...</p>
                 
                     <button type="button" class="minus1" onclick="subtractYear();">-</button>
@@ -94,12 +97,14 @@
 
                 <a href="#WishInput">
                 <button type="button" class='Next'>Next<br> <br>
-                    <img src=images/arrow_down.png alt="Down Arrow" height="44" width="73">
+                    <img src=images/arrow_down.png alt="Down Arrow">
                 </button>
                 </a>
+                </div>
             </div>
 
-            <div class="section" id="WishInput">   
+            <div class="section" id="WishInput">  
+                <div class="content">
                 <p class="captions">I wished for...</p>
                 <textarea name="wish_made" required></textarea>
                 <br>
@@ -107,8 +112,9 @@
                 <input type="hidden" name="time" value="0"/>
                 
                 <button type="submit">Create Token <br> <br>
-                <img src=images/token.png alt="Token" height="100" width="100">
+                <img src=images/token.png alt="Token">
                 </button>
+                </div>
             </div>     
             
         </form>

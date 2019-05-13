@@ -19,6 +19,7 @@ html {
     color: #E6E6E6;
     font-size: 1rem;
     text-align: left;
+    z-index: 10;
 		}
     #main_nav:target {
 			display: block;
@@ -36,6 +37,7 @@ div#closed_nav{
     top: 0;
     right: 0;
     display: block;
+    z-index: 5;
 }
 img#nav_open_img{
     max-width: 17%;
@@ -120,14 +122,19 @@ body {
 button { /*ALL Buttons*/
     font-family: 'Dosis', sans-serif;
     color: #999999;
+    width: 30%;
     font-size: 0.75rem;
-    width: 10%;
-    max-width: 10%;
-    height: auto;
-    object-fit: contain;
     border-style: none;
     background-color: transparent;
     outline: none;
+}
+
+button img {
+    width: 30%;
+    max-width: 95px;
+    min-width: 50px;
+    max-height: 95px;
+    object-fit: contain;
 }
 
 /* Code for How it Works Page*/
@@ -182,12 +189,21 @@ button { /*ALL Buttons*/
 /* Code for Start Token Page*/
 
 #NoOfCandles, #Age, #WishInput {
-    display: table;
+    position: relative;
     width: 100%;
     height: 100vh;
     padding: 4%;
-    vertical-align: middle;
     text-align: center;
+}
+
+#NoOfCandles .content, #Age .content, #WishInput .content {
+ position: absolute;
+    
+    top:50%;
+    left: 50%;
+    width: 100%;
+    
+    transform: translate3d(-50%, -50%, 0);
 }
 
 input{
@@ -249,20 +265,14 @@ textarea{
 #Token{
     text-align: center
     margin: 2% auto;
-    width: 80%;
+    width: 100%;
     object-fit: contain;
 }
-
-/*#Token canvas {
-    display: block;
-    height: 400px;
-}*/
+#Token canvas {
+    margin: 1%;
+}
 
 /*Code for Buy Page*/
 #Necklace, #Keychain{
     grid-column-start: 2;
-}
-
-.option {
-    outline: solid;
 }
