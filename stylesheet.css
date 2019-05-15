@@ -276,3 +276,10 @@ textarea{
 #Necklace, #Keychain{
     grid-column-start: 2;
 }
+
+.product{
+    width: 100%;
+    min-width: 100px;
+    height: auto;
+    object-fit: contain;
+}
